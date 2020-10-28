@@ -17,6 +17,8 @@
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
+         <webXml>WebRoot\WEB-INF\web.xml</webXml>
+         <warSourceDirectory>WebRoot</warSourceDirectory>
         </configuration>
       </plugin>
       <plugin> 
