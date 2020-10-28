@@ -5,18 +5,18 @@
     <artifactId>easy-springmvc-maven</artifactId>
     <version>2.261</version>
     <name>springmvc-maven</name>
-    <description>A simple demonstration on how to use maven with spring mvc</description>
+    <description>Creates a war file. Also includes additional static web resources, such as images, CSS, JavaScript, and some HTML files.</description>
     <Build>
-    	<finalName> easy-springmvc-maven </finalName>
-    	<plugin>
-    		<plugin>
-    			<artifactId>maven-compiler-plugin</artifactId>
-    			<version>3.1</version>
-    			<configuration>
-    				<source> 1.6 </source>
-    				<Goal> 1.6 </Goal>
-    			</Configuration>
-    		</plugin>
+    <finalName> easy-springmvc-maven </finalName>
+    <plugin>
+    <plugin>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.1</version>
+    <configuration>
+    <source> 1.6 </source>
+    <Goal> 1.6 </Goal>
+    </Configuration>
+    </plugin>
         <plugin>
       <artifactId> maven-war-plugin </artifactId>
         <configuration>
