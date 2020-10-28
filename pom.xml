@@ -1,13 +1,91 @@
-t插件-->
-  <plugins>
-
-    <plugin>
-      <groupId>org.apache.tomcat.maven</groupId>
-      <artifactId>tomcat7-maven-plugin</artifactId>
-      <version>2.2</version>
-      <configuration>
-        <path>/zhang</path>
-        <port>8080</port>
-      </configuration>
-    </plugin>
-  </plugins>
+project  xmlns = “ http://maven.apache.org/POM/4.0.0 ”  xmlns ：xsi = “ http://www.w3.org/2001/XMLSchema-instance ”  xsi ：schemaLocation = “ http：/ /maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd “ >
+  < modelVersion > 4.0.0 </ modelVersion >
+  < groupId > springmvc-maven </ groupId >
+  < artifactId > easy-springmvc-maven </ artifactId >
+  <版本> 0.0.1-SNAPSHOT </版本>
+  <包装>战争</包装>
+  < name > springmvc-maven </ name >
+  < description >有关如何使用maven结合spring mvc的简单演示</ description >
+  <构建>
+  <！-使用默认的文件路径->
+   <！-生成的war文件名避免添加版本号->
+    < finalName > easy-springmvc-maven </ finalName >
+    <插件>
+      <插件>
+        < artifactId > maven-compiler-plugin </ artifactId >
+        <版本> 3.1 </版本>
+        <配置>
+          < source > 1.6 </ source >
+          <目标> 1.6 </目标>
+        </配置>
+      </插件>
+      <插件>
+      < artifactId > maven-war-plugin </ artifactId >
+        <配置>
+        <版本> 3.0 </版本>
+        <！- maven的web项目替代的webroot是在src \ main \ webapp。如果在此目录下找到web.xml就抛出webxml属性是必需的异常->
+        <！-需要在pom.xml中增加<webXml>配置->
+        <！- <webXml> WebContent \ WEB-INF \ web.xml </ webXml> ->
+        </配置>
+       </插件>
+    </插件>
+  </ build >
+  <依赖项>
+  	<依存关系>
+  		< groupId > junit </ groupId >
+  		< artifactId > junit </ artifactId >
+  		<版本> 4.12 </版本>
+  		<作用域>测试</作用域>
+  	</依赖>
+    
+    <！- spring mvc依赖关系开始->
+	<依存关系>
+		< groupId > org.springframework </ groupId >
+		< artifactId > spring-webmvc </ artifactId >
+		<版本> $ {spring.version} </版本>
+	</依赖>
+	<依存关系>
+		< groupId > org.springframework </ groupId >
+		< artifactId > spring-jdbc </ artifactId >
+		<版本> $ {spring.version} </版本>
+	</依赖>
+	<依存关系>
+		< groupId > org.springframework </ groupId >
+		< artifactId > spring-context </ artifactId >
+		<版本> $ {spring.version} </版本>
+	</依赖>
+	<依存关系>
+		< groupId > org.springframework </ groupId >
+		< artifactId > spring-aop </ artifactId >
+		<版本> $ {spring.version} </版本>
+	</依赖>
+	<依存关系>
+		< groupId > org.springframework </ groupId >
+		< artifactId > spring-core </ artifactId >
+		<版本> $ {spring.version} </版本>
+	</依赖>
+	<依存关系>
+		< groupId > org.springframework </ groupId >
+		< artifactId >弹簧测试</ artifactId >
+		<版本> $ {spring.version} </版本>
+	</依赖>
+	<！- spring mvc依赖关系结束->
+	<！-解决页面访问时发生错误：java.lang.NoClassDefFoundError：javax / servlet / jsp / jstl / core / Config-开始->
+	<依存关系>
+		< groupId > jstl </ groupId >
+		< artifactId > jstl </ artifactId >
+		<版本> 1.2 </版本>
+	</依赖>
+	<依存关系>
+		< groupId >标签库</ groupId >
+		< artifactId >标准</ artifactId >
+		<版本> 1.1.2 </版本>
+	</依赖>
+	<！-结束->
+  </依赖>
+  
+  <属性>
+  	< project .build.sourceEncoding> UTF-8 </ project .build.sourceEncoding>
+  	< spring .version> 3.1.2.RELEASE </ spring .version>
+  </属性>
+</ project >
