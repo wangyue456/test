@@ -1,82 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-<modelVersion>4.0.0</modelVersion>
-<modelVersion>4.0.0</modelVersion> 
-<groupId>com.mytutorial</groupId>
-<artifactId>simpleSpringRestWeb</artifactId>
-<version>1.0-SNAPSHOT</version>
-<packaging>war</packaging>
-
-<name>simpleSpringRestWeb</name>
-<url>http://maven.apache.org</url>
-
-<properties>
-    <javac.src.version>1.7</javac.src.version>
-    <javac.target.version>1.7</javac.target.version>
-    <test.coverage.rate>100</test.coverage.rate>
-    <cobertura.skip>false</cobertura.skip>
-    <cobertura.skip>false</cobertura.skip>
-</properties> 
- <dependencies>
- <dependency>
-     <groupId>net.sourceforge.cobertura</groupId>
-     <artifactId>cobertura</artifactId>
-      <version>2.1.1</version>
-      <scope>test</scope>
- </dependency>
- <dependency>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <version>2.7</version>
-        <scope>test</scope>
-</dependency>
-</dependencies> 
-<reporting>
-<plugins>
-      <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-project-info-reports-plugin</artifactId>
-            <version>2.7</version>
-            <configuration>
-                <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-            </configuration>
-      </plugin>
-      <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>3.2.2</version>
-            <configuration>
-                <failOnMissingWebXml>false</failOnMissingWebXml>
-            </configuration>
-        </plugin>
+<build>
+    <plugins>
         <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-surefire-plugin</artifactId>
-               <version>3.0.0-M3</version>
-        </plugin>
-        <plugin> 
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-site-plugin</artifactId>
-              <version>3.7.1</version>
-        </plugin>
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>cobertura-maven-plugin</artifactId>
-            <version>2.7</version>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
             <configuration>
-                <formats>
-                    <format>xml</format>
-                    <format>html</format>
-                </formats>
+                <path>/</path>
+                <port>8080</port>
             </configuration>
-         <reportSets>
-            <reportSet>
-                <id>cobertura-report</id>
-                <reports>
-                    <report>clean</report>
-                    <report>cobertura</report>
-                </reports>
-            </reportSet>
-        </reportSets> 
         </plugin>
     </plugins>
+</build>
