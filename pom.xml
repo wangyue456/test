@@ -6,6 +6,9 @@
     <version>2.261</version>
     <name>springmvc-maven</name>
     <description>Creates a war file. Also includes additional static web resources, such as images, CSS, JavaScript, and some HTML files.</description>
+    <Build>
+    <! -Use the default file path ->
+    <! -Avoid adding version number to the generated war file name ->
     <finalName> easy-springmvc-maven </finalName>
     <plugin>
     <plugin>
