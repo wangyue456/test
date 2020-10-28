@@ -10,12 +10,6 @@
   <packaging>pom</packaging>
   <name>SortPom</name>
   <description>A Maven plugin that sorts the pom.xml file.</description>
-
-  <modules>
-    <module>sorter</module>
-    <module>maven-plugin</module>
-  </modules>
-
   <properties>
     <compileSource>1.8</compileSource>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
