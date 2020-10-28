@@ -1,4 +1,4 @@
-< project  xmlns = " http://maven.apache.org/POM/4.0.0 " xmlns : xsi = "http://www.w3.org/2001/XMLSchema-instance " xsi : schemaLocation = " http:/ /maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd " >
+< project xmlns = "http://maven.apache.org/POM/4.0.0"  xmlns : xsi = "http://www.w3.org/2001/XMLSchema-instance " xsi : schemaLocation = " http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd " >
   < modelVersion > 4.0.0 </ modelVersion >
   < groupId > springmvc-maven </ groupId >
   < artifactId > easy-springmvc-maven </ artifactId >
@@ -85,7 +85,7 @@
   </依赖>
   
   <属性>
-  	< project .build.sourceEncoding> UTF-8 </ project .build.sourceEncoding>
-  	< spring .version> 3.1.2.RELEASE </ spring .version>
+  	< project.build.sourceEncoding> UTF-8 </ project.build.sourceEncoding>
+  	< spring.version> 3.1.2.RELEASE </ spring.version>
   </属性>
 </ project >
