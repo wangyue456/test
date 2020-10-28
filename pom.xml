@@ -17,8 +17,6 @@
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
-         <webXml>WebRoot\WEB-INF\web.xml</webXml>
-         <warSourceDirectory>WebRoot</warSourceDirectory>
         </configuration>
       </plugin>
       <plugin> 
@@ -28,6 +26,17 @@
         <!-- maven的web项目默认的webroot是在src\main\webapp。如果在此目录下找不到web.xml就抛出webxml attribute is required的异常 -->
         <!-- 需要在pom.xml中增加<webXml>配置 -->
         <!-- <webXml>WebContent\WEB-INF\web.xml</webXml> -->
+        <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-war-plugin</artifactId>
+	    <version>2.2</version>
+	     <configuration>
+	       <!-- 指定web.xml的路径  -->
+               <webXml>WebRoot\WEB-INF\web.xml</webXml>
+               <!-- 指定jsp、js、css的路劲 --> 
+               <warSourceDirectory>WebRoot</warSourceDirectory>
+	   </configuration>
+	</plugin>
         </configuration> 
        </plugin>
     </plugins>
